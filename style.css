@@ -94,9 +94,9 @@ ul.top_menu_item li.active a:hover {
 
 .hero {
 	width:975px;
-	height:438px;
+	height:500px;
 	display:block;
-	background-image:url('images/msd_hero.jpg');
+	background-image:url('images/banner.jpg');
 	background-repeat:no-repeat;
 	background-position:left top;
 }
@@ -264,6 +264,73 @@ ul.top_menu_item li.active a:hover {
 .even {
 	background-color:#b9ece7;
 }
+
+/*2019/08 新增*/
+#box_info,
+#nav{
+    display: block;
+    width: 100%
+}
+#box_info img{
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0
+}
+#nav ul{
+    list-style: none
+}
+#nav ul::after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0}
+#nav li a{
+    display: block;
+    float: left;
+    width: 305px;
+    height: 84px;
+    margin: 0 3px 15px;
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    background: url(images/btnNav.png) no-repeat
+}
+#nav li.nav01 a{
+    margin-left: 150px;
+    background-position: 0 0;
+}
+#nav li.nav01 a:hover{
+    background-position: 0 -84px;
+}
+#nav li.nav02 a{
+    background-position: -305px 0;
+}
+#nav li.nav02 a:hover{
+    background-position: -305px -84px
+}
+#nav li.nav03 a{
+    background-position: -610px 0;
+}
+#nav li.nav03 a:hover{
+    background-position: -610px -84px;
+}
+#nav li.nav04 a{
+    background-position: -915px 0;
+}
+#nav li.nav04 a:hover{
+    background-position: -915px -84px;
+}
+#nav li.nav05 a{
+    background-position: -1220px 0;
+}
+#nav li.nav05 a:hover{
+    background-position: -1220px -84px;
+}
+  
 
 
 
