@@ -1,25 +1,30 @@
-﻿body {
+﻿@charset "utf-8";
+@import url("reset.css");
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans+TC:100,400,700&display=swap");
+
+html { font-size:62.5%}
+body {
 	margin:0px;
 	padding:0px;
 	left:0px;
 	top:0px;
-	font-family:Verdana, Arial, Helvetica, sans-serif;
-	font-size:14px;
-	line-height:16px;
-	color:#676767;
+	font-family:"Noto Sans TC", "Microsoft JhengHei","PingFangTC-Regular", "Arial", "Helvetica", sans-serif;
+    font-size: 1rem; /* 1rem=10px */
+	line-height:1.5rem;
+	color:#333;
 }
 
 img {
 	border:0px;
 }
 
-p {
+/*p {
 	margin:0px;
 	padding:0px;
 	margin-bottom:16px;
-}
+}*/
 
-.wrapper {
+#wrapper {
 	width:975px;
 	margin:0px auto;
 	padding:0px;
@@ -34,7 +39,7 @@ p {
 	width:184px;
 	height:58px;
 	display:inline-block;
-	background-image:url('images/msd_logo.png');
+	background-image:url('../images/msd_logo.png');
 	background-repeat:no-repeat;
 	background-position:10px top;
 }
@@ -96,7 +101,7 @@ ul.top_menu_item li.active a:hover {
 	width:975px;
 	height:500px;
 	display:block;
-	background-image:url('images/banner.jpg');
+	background-image:url('../images/banner.jpg');
 	background-repeat:no-repeat;
 	background-position:left top;
 }
@@ -120,7 +125,7 @@ ul.top_menu_item li.active a:hover {
 	width:924px;
 	margin:0px 0px 20px 0px;
 	padding:0px;
-	background-image:url('images/msd_module_02.png');
+	background-image:url('../images/msd_module_02.png');
 	background-repeat:repeat-y;
 	background-position:left top;
 }
@@ -129,7 +134,7 @@ ul.top_menu_item li.active a:hover {
 	width:924px;
 	margin:0px;
 	padding:20px 0px 0px 0px;
-	background-image:url('images/msd_module_01.png');
+	background-image:url('../images/msd_module_01.png');
 	background-repeat:no-repeat;
 	background-position:left top;
 }
@@ -138,7 +143,7 @@ ul.top_menu_item li.active a:hover {
 	width:924px;
 	margin:0px;
 	padding:0px 0px 10px 0px;
-	background-image:url('images/msd_module_03.png');
+	background-image:url('../images/msd_module_03.png');
 	background-repeat:no-repeat;
 	background-position:left bottom;
 }
@@ -165,7 +170,7 @@ ul.top_menu_item li.active a:hover {
 	width:975px;
 	height:17px;
 	display:block;
-	background-image:url('images/msd_footer_05.png');
+	background-image:url('../images/msd_footer_05.png');
 	background-repeat:repeat-x;
 	background-position:left top;
 	margin-bottom:30px;
@@ -186,7 +191,7 @@ ul.top_menu_item li.active a:hover {
 	display:inline-block;
 	width:228px;
 	height:48px;
-	background-image:url('images/msd_qandamenu_04.png');
+	background-image:url('../images/msd_qandamenu_04.png');
 	background-repeat:no-repeat;
 	background-position:left top;
 }
@@ -266,8 +271,10 @@ ul.top_menu_item li.active a:hover {
 }
 
 /*2019/08 新增*/
+#nav,
 #box_info,
-#nav{
+#box_form,
+#box_list{
     display: block;
     width: 100%
 }
@@ -279,7 +286,9 @@ ul.top_menu_item li.active a:hover {
     padding: 0
 }
 #nav ul{
-    list-style: none
+    list-style: none;
+    margin-top: 15px;
+    padding-left: 30px
 }
 #nav ul::after {
     content: ".";
@@ -297,40 +306,184 @@ ul.top_menu_item li.active a:hover {
     text-indent: 100%;
     white-space: nowrap;
     overflow: hidden;
-    background: url(images/btnNav.png) no-repeat
+    background: url(../images/btnNav.png) no-repeat
 }
 #nav li.nav01 a{
     margin-left: 150px;
     background-position: 0 0;
 }
-#nav li.nav01 a:hover{
+#nav li.nav01 a:hover,
+#nav li.nowin01 a{
     background-position: 0 -84px;
 }
 #nav li.nav02 a{
     background-position: -305px 0;
 }
-#nav li.nav02 a:hover{
+#nav li.nav02 a:hover,
+#nav li.nowin02 a{
     background-position: -305px -84px
 }
 #nav li.nav03 a{
     background-position: -610px 0;
 }
-#nav li.nav03 a:hover{
+#nav li.nav03 a:hover,
+#nav li.nowin03 a{
     background-position: -610px -84px;
 }
 #nav li.nav04 a{
     background-position: -915px 0;
 }
-#nav li.nav04 a:hover{
+#nav li.nav04 a:hover,
+#nav li.nowin04 a{
     background-position: -915px -84px;
 }
 #nav li.nav05 a{
     background-position: -1220px 0;
 }
-#nav li.nav05 a:hover{
+#nav li.nav05 a:hover,
+#nav li.nowin05 a{
     background-position: -1220px -84px;
 }
-  
+
+#box_form{
+    display: block;
+    width: 90%;
+    margin: 15px auto 30px auto;
+    padding-left: 10px
+}
+#box_form h2,
+#myForm h3{
+    font-size: 2.6rem;
+    color: #0a8278;
+    text-align: center
+}
+#box_form h2 span{
+    display: block;
+    font-size: 1.6rem;
+    font-weight: normal;
+    color: #e60012;
+    text-align: left;
+    padding: 15px 0 15px 20px
+}
+#myForm h3{
+    display: inline-block;
+    margin: 40px 20px 0 300px;
+    vertical-align: text-bottom}
+#myForm p{
+    font-family:"Noto Sans TC", "Microsoft JhengHei","PingFangTC-Regular", "Arial", "Helvetica", sans-serif;
+    font-size: 1.6rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #646464;
+    text-align: right}
+
+#myForm .form-item,
+#myForm .form-item-tall{
+    display: block;
+    width: 100%;
+    background: #fff;
+    border: 1px solid #177d74;
+    margin-bottom: 30px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+    overflow: hidden}
+#myForm .form-item{ height: 49px}
+#myForm .form-item-tall{ height: 180px}
+#myForm label{
+    display: block;
+    float: left;
+    width: 33%;
+    padding: 17px 16px 17px 0;
+    margin-bottom: 30px;
+    background: #177d74;
+    font-size: 1.8rem;
+    letter-spacing: 1px;
+    color: #fff;
+    text-align: right;
+    -webkit-border-radius: 8px 0 0 8px;
+    -moz-border-radius: 8px 0 0 8px;
+    border-radius: 8px 0 0 8px}
+.lable-tall{ height: 180px}
+#myForm textarea{
+    font-family:"Noto Sans TC", "Microsoft JhengHei","PingFangTC-Regular", "Arial", "Helvetica", sans-serif;
+    font-size: 1.8rem;
+    font-weight: normal;
+    color: #333;
+    padding: 10px 0 0 15px;
+    overflow: hidden;
+    resize : none;
+    height: 170px;
+    overflow-y: scroll;
+    border: none
+}
+#myForm label span{ color: #ff2a2a; padding-right: 2px
+}
+#myForm input{
+    display: block;
+    float: right;
+    width: 66%;
+    height: 45px;
+    font-family:"Noto Sans TC", "Microsoft JhengHei","PingFangTC-Regular", "Arial", "Helvetica", sans-serif;
+    font-size: 1.8rem;
+    font-weight: normal;
+    color: #333;
+    border: none;
+    padding-left: 15px
+}
+#myForm select{
+    display: block;
+    width: 575px;
+    font-family:"Noto Sans TC", "Microsoft JhengHei","PingFangTC-Regular", "Arial", "Helvetica", sans-serif;
+    font-size: 1.8rem;
+    font-weight: normal;
+    color: #333;
+    margin-top: 10px;
+    padding-left: 15px;
+    border: none 
+}
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #333;
+  opacity: 1; /* Firefox */}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: #333}
+::-ms-input-placeholder { /* Microsoft Edge */
+  color: #333}
+
+.btn_send{
+    display: inline-block;
+    width: 120px;
+    height: 40px;
+    font-size: 1.6rem;
+    letter-spacing: 1px;
+    color: #fff;
+    background: #177d74;
+    border: none;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+}
+.btn_send:hover{
+    cursor: pointer;
+    background: #21bba5
+}
+
+#box_list{
+    padding-top: 15px
+}
+#box_list h2{
+    font-size: 2.2rem;
+    line-height: 3rem;
+    color: #0a8278;
+    padding-left: 100px
+}
+#box_list p{
+    font-size: 1.6rem;
+    color: #727171;
+    padding-bottom: 15px;
+    padding-left: 100px
+}
+
 
 
 
