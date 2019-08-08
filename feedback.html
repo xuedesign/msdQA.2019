@@ -28,7 +28,8 @@
             <form id="myForm" action="" method="POST">
                 <div class="form-item-tall">
                     <label class="lable-tall" for="your-question"><span>*</span>Suggestions / Questions</label>
-                    <textarea name="your-question" id="your-question" placeholder="Enter your Suggestions / Questions" cols="60" rows="10"></textarea>
+<!--                    <textarea name="your-question" id="your-question" placeholder="Enter your Suggestions / Questions" cols="60" rows="10"></textarea>-->
+                    <textarea name="your-question" id="your-question" placeholder="Enter your Suggestions / Questions"></textarea>
                 </div>
                 
                 <div class="form-item">
@@ -61,5 +62,12 @@
             </form>
         </div>
     </div><!-- //end #wrapper -->
+    
+    <script src="https://code.jquery.com/jquery.min.js"></script>
+    <script src="lib/jquery.ui.totop.js"></script>
+    <script src="lib/easing.js"></script>
+    <script>
+        $(document).ready(function(){$().UItoTop({easingType:"easeOutQuart"})});
+    </script>
 </body>
 </html>
